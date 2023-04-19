@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Die from './components/Die'
-import Header from './components/Header';
+import Die from './components/Die.jsx'
+import Header from './components/Header.jsx';
 import { nanoid } from 'nanoid';
 import { useEffect } from 'react';
 import Confetti from 'react-confetti'
