@@ -72,7 +72,7 @@ export default function App() {
 
   return (
     <main>
-      {tenzies && <p className='win'>You Won!</p>}
+      {tenzies && <p className='win'>Woo-hoo!</p>}
       {tenzies && <Confetti width={window.innerWidth} height={window.innerHeight}/>}
       <Header/>
       <div className='dies-container'>{diceElements}</div>
