@@ -1,5 +1,4 @@
 export default function Die(props){
-
     return(
     <div 
         onClick={()=>props.handleDieClick(props.id)} 

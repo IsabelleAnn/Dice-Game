@@ -48,7 +48,6 @@ export default function App() {
         return !die.isLocked ? {...die, value: getRandomDiceValue()} : die
     }))
     }
-    
   }
   
   useEffect(()=>{
