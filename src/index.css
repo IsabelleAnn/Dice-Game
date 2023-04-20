@@ -1,5 +1,6 @@
 :root {
   --shadow: 0px 4px 4px 0px #00000040;
+  --button-background-color: #0b2434;
 }
 
 * {
@@ -11,7 +12,7 @@
 body {
   font-family: "Karla";
   font-size: 20px;
-  background-color: #0b2434;
+  background-color: var(--button-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +56,7 @@ main,
   background-color: white;
   box-shadow: var(--shadow);
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 4px;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -77,15 +76,22 @@ main,
   color: white;
   border: none;
   border-radius: 5px;
-  background-color: #5035ff;
+  background-color: var(--button-background-color);
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 150ms linear;
-
   box-shadow: var(--shadow);
 }
 
 .roll-btn:hover {
-  background-color: #735eff;
+  background-color: #0b2434bd;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
 }
