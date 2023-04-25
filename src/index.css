@@ -1,6 +1,7 @@
 :root {
   --shadow: 0px 4px 4px 0px #00000040;
-  --button-background-color: #1d3f55;
+  --button-background-color: #3c486b;
+  --color: #a3a3a3;
 }
 
 * {
@@ -20,8 +21,8 @@ body {
 }
 
 main {
-  background-color: #f5f5f5;
-  color: #2b283a;
+  background-color: #f0f0f0;
+  color: #2a324b;
   width: min-content;
   height: min-content;
   border-radius: 10px;
@@ -76,7 +77,7 @@ main,
   color: white;
   border: none;
   border-radius: 5px;
-  background-color: var(--button-background-color);
+  background-color: #ff8181;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -85,13 +86,13 @@ main,
 }
 
 .roll-btn:hover {
-  background-color: #0b2434bd;
+  background-color: #f45050;
 }
 
 .dot {
   height: 10px;
   width: 10px;
-  background-color: black;
+  background-color: var(--button-background-color);
   border-radius: 50%;
   display: block;
 }
@@ -101,25 +102,34 @@ main,
   align-items: center;
   justify-content: center;
 }
-.first-face .dot {
+/* .first-face .dot {
   background-color: #ff2f8e;
 }
+.second-face .dot {
+  background-color: #ff2f2f;
+}
+.third-face .dot {
+  background-color: #5e6ee0;
+}
+.fourth-face .dot {
+  background-color: #9803ce;
+}
+.fifth-face .dot {
+  background-color: #ffd600;
+}
+.sixth-face .dot {
+  background-color: #ff6600;
+} */
 
 .second-face,
 .third-face {
   display: flex;
   justify-content: space-between;
 }
-.second-face .dot {
-  background-color: #66df48;
-}
 .second-face .dot:nth-of-type(1) {
   align-self: flex-end;
 }
 
-.third-face .dot {
-  background-color: #5e6ee0;
-}
 .third-face .dot:nth-of-type(1) {
   align-self: flex-end;
 }
@@ -142,9 +152,6 @@ main,
 .fourth-face .dot:nth-of-type(4) {
   justify-self: end;
   align-self: end;
-}
-.fourth-face .dot {
-  background-color: #9803ce;
 }
 
 .fifth-face {
@@ -172,9 +179,6 @@ main,
   align-self: end;
   justify-self: end;
 }
-.fifth-face .dot {
-  background-color: #ffd600;
-}
 
 .sixth-face {
   display: grid;
@@ -199,7 +203,4 @@ main,
 .sixth-face .dot:nth-of-type(6) {
   align-self: end;
   justify-self: end;
-}
-.sixth-face .dot {
-  background-color: #ff6600;
 }

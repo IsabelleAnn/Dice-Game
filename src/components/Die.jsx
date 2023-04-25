@@ -30,7 +30,7 @@ export default function Die(props){
     return(
     <div 
         onClick={()=>props.handleDieClick(props.id)} 
-        style={props.isLocked ? {backgroundColor: "#0b2434"} : {}} 
+        style={props.isLocked ? {backgroundColor: "#F9D949"} : {}} 
         className={`die ${diceStyle}`}>{dotElements}
     </div>)
 }
