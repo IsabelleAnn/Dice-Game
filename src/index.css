@@ -26,7 +26,7 @@ main {
   width: min-content;
   height: min-content;
   border-radius: 10px;
-  padding: 60px;
+  padding: 50px 70px;
 }
 
 main,
@@ -39,11 +39,12 @@ main,
 
 .win {
   position: absolute;
-  top: 120px;
+  top: 50px;
   font-size: 4rem;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 5px 0 black, 0 -1px black;
 }
+
 .dies-container {
   display: grid;
   grid-template-columns: repeat(5, 55px);
@@ -89,6 +90,25 @@ main,
   background-color: #f45050;
 }
 
+.game-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Roboto Mono", monospace;
+}
+.stopwatch {
+  text-align: right;
+  padding: 2px;
+}
+.best-time {
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  right: 600px;
+}
+.timer {
+}
 .dot {
   height: 10px;
   width: 10px;
@@ -102,24 +122,6 @@ main,
   align-items: center;
   justify-content: center;
 }
-/* .first-face .dot {
-  background-color: #ff2f8e;
-}
-.second-face .dot {
-  background-color: #ff2f2f;
-}
-.third-face .dot {
-  background-color: #5e6ee0;
-}
-.fourth-face .dot {
-  background-color: #9803ce;
-}
-.fifth-face .dot {
-  background-color: #ffd600;
-}
-.sixth-face .dot {
-  background-color: #ff6600;
-} */
 
 .second-face,
 .third-face {
