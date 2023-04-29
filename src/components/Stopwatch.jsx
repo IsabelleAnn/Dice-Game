@@ -3,11 +3,12 @@ export default function Stopwatch(props) {
   let minStr = addZero(props.times.min);
   let hourStr = addZero(props.times.hour);
   let timeStr = `${hourStr}:${minStr}:${secStr}`;
-  let bestSec = addZero(props.times.best.sec);
-  let bestMin = addZero(props.times.best.min);
-  let bestHour = addZero(props.times.best.hour);
-  let bestTime = `${bestHour}:${bestMin}:${bestSec}`;
-
+  let bestSec = addZero(props.best.sec);
+  let bestMin = addZero(props.best.min);
+  let bestHour = addZero(props.best.hour);
+  let bestTimeStr = `${bestHour}:${bestMin}:${bestSec}`;
+  let bestIsZero =
+    props.best.sec + props.best.min + props.best.hour === 0 ? true : false;
   function addZero(num) {
     return num < 10 ? `0${num}` : `${num}`;
   }
@@ -15,7 +16,10 @@ export default function Stopwatch(props) {
   return (
     <div className="stopwatch">
       <p className="timer">Timer: {timeStr}</p>
-      <p className="best-time">Best Time: {bestTime}</p>
+      <p className="best-time">
+        Best Time: {bestIsZero ? "--:--:--" : bestTimeStr}
+      </p>
+      {props.isBestTime && <h1 className="new-best">New Best Time!</h1>}
     </div>
   );
 }

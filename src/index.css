@@ -3,6 +3,8 @@
   --gray-blue: #3c486b;
   --red: #f45050;
   --light-gray: #f0f0f0;
+  --main-font: "Karla";
+  --timer-font: "Roboto Mono", monospace;
 }
 
 * {
@@ -12,7 +14,7 @@
 }
 
 body {
-  font-family: "Karla";
+  font-family: var(--main-font);
   font-size: 20px;
   background-color: var(--gray-blue);
   display: flex;
@@ -96,7 +98,7 @@ main,
   justify-content: space-between;
   width: 100%;
   padding-top: 40px;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--timer-font);
 }
 .stopwatch {
   text-align: right;
@@ -115,7 +117,16 @@ main,
   bottom: 11%;
   left: 50%;
 }
-
+.new-best {
+  font-family: var(--main-font);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 1px 2px var(--red);
+  position: absolute;
+  bottom: 4%;
+  color: white;
+  left: 50%;
+}
 .dot {
   height: 10px;
   width: 10px;
