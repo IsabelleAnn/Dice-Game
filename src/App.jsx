@@ -2,7 +2,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useEffect } from "react";
 import Confetti from "react-confetti";
-import Die from "./components/Die.jsx";
+import Dice from "./components/Dice.jsx";
 import Header from "./components/Header.jsx";
 import Stopwatch from "./components/Stopwatch.jsx";
 import Rolls from "./components/Rolls.jsx";
@@ -57,9 +57,9 @@ export default function App() {
   }
 
   function allNewDice(length) {
-    const numberOfDies = length;
+    const numberOfDice = length;
     let numberArray = [];
-    for (let i = 1; i <= numberOfDies; i++) {
+    for (let i = 1; i <= numberOfDice; i++) {
       numberArray.push({
         value: getRandomDiceValue(),
         isLocked: false,
@@ -97,7 +97,7 @@ export default function App() {
     }
   }
 
-  function handleDieClick(id) {
+  function handleDiceClick(id) {
     setDice((prevDice) => {
       return prevDice.map((die) => {
         return die.id === id ? { ...die, isLocked: !die.isLocked } : die;
@@ -121,40 +121,7 @@ export default function App() {
           return die.isLocked === false ? { ...die, isLocked: true } : die;
         })
       );
-      //   if (
-      //     prevTimes.best.hour == 0 &&
-      //     prevTimes.best.min == 0 &&
-      //     prevTimes.best.sec == 0
-      //   ) {
-      //     setIsBestTime((prev) => !prev);
-      //     return {
-      //       ...prevTimes,
-      //       best: {
-      //         hour: prevTimes.hour,
-      //         min: prevTimes.min,
-      //         sec: prevTimes.sec,
-      //       },
-      //     };
-      //   }
-      //   if (
-      //     prevTimes.hour < prevTimes.best.hour ||
-      //     (prevTimes.hour == prevTimes.best.hour &&
-      //       prevTimes.min < prevTimes.best.min) ||
-      //     (prevTimes.min == prevTimes.best.min &&
-      //       prevTimes.sec < prevTimes.best.sec)
-      //   ) {
-      //     setIsBestTime((prev) => !prev);
-      //     return {
-      //       ...prevTimes,
-      //       best: {
-      //         hour: prevTimes.hour,
-      //         min: prevTimes.min,
-      //         sec: prevTimes.sec,
-      //       },
-      //     };
-      //   }
-      //   return prevTimes;
-      // });
+
       setBestTime((prevBest) => {
         if (prevBest.hour == 0 && prevBest.min == 0 && prevBest.sec == 0) {
           setIsBestTime(true);
@@ -184,8 +151,8 @@ export default function App() {
 
   let diceElements = dice.map((die) => {
     return (
-      <Die
-        handleDieClick={handleDieClick}
+      <Dice
+        handleDiceClick={handleDiceClick}
         isLocked={die.isLocked}
         value={die.value}
         key={die.id}
@@ -202,7 +169,7 @@ export default function App() {
           <Confetti width={window.innerWidth} height={window.innerHeight} />
         )}
         <Header />
-        <div className="dies-container">{diceElements}</div>
+        <div className="dice-container">{diceElements}</div>
         <button onClick={handleBtnClick} className="roll-btn">
           {tenzies ? "Restart" : "Roll"}
         </button>

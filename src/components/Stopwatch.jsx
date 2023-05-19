@@ -19,7 +19,7 @@ export default function Stopwatch(props) {
       <p className="best-time">
         Best Time: {bestIsZero ? "--:--:--" : bestTimeStr}
       </p>
-      {props.isBestTime && <h1 className="new-best">New Best Time!</h1>}
+      {props.isBestTime && <h1 className="new-best">New!</h1>}
     </div>
   );
 }

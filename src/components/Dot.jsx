@@ -1,5 +1,3 @@
-export default function Dot(){
-return (
-    <div className="dot"></div>
-)
+export default function Dot() {
+  return <div className="dot"></div>;
 }
