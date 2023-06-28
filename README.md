@@ -1,6 +1,4 @@
-# Tenzies
-
-Dice Match Game
+# Dice Match Game
 
 ## Features:
 
