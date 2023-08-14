@@ -9,7 +9,7 @@
 - Display best time record and save to local storage
 - Add pips to dice instead of numbers
 
-:point_right:[Live Demo](https://isabelleann.github.io/Tenzies/)
+:point_right:[Live Demo](https://isabelleann.github.io/Dice-Game/)
 
 ## Built With:
 
